@@ -5,14 +5,14 @@ struct ParachuteStateStruct {
     bool drogueDeployed; //type uint8_t = 1 byte
     bool mainDeployed;
     bool mainStopped;
-};
+} parachute;
 
 
 struct AltitudeStateStruct {
     bool isFalling;
     volatile float currentAltitude;
     volatile float maxAltitude; //type uint32_t = 4 bytes
-};
+} alt;
 
 
 /* Alternatively
@@ -35,7 +35,7 @@ struct UpdateAltitude {
         }
         return h;
     }
-};
+} customAlt;
 
 
 #endif /* recovery_main_hpp */
