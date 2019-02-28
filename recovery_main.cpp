@@ -17,17 +17,18 @@ PWMServo mainServo;
  initialise globals to be used in setup & loop
 */
 
+/*
 //VERSION 1
 ParachuteStateStruct* p_parachute = (ParachuteStateStruct*) malloc(sizeof(ParachuteStateStruct));
 AltitudeStateStruct* p_altitude = (AltitudeStateStruct*) malloc(sizeof(AltitudeStateStruct));
 UpdateAltitude* p_customAltitude = (UpdateAltitude*) malloc(sizeof(UpdateAltitude));
+*/
 
-
-/*//VERSION 2
- ParachuteStateStruct* p_parachute = &parachute;  //Define parachute after struct
- AltitudeStateStruct* p_altitude = &alt;
- UpdateAltitude* p_customAltitude = &customAlt;
- */
+//VERSION 2
+ParachuteStateStruct* p_parachute = &parachute;  //Define parachute after struct
+AltitudeStateStruct* p_altitude = &alt;
+UpdateAltitude* p_customAltitude = &customAlt;
+ 
 
 
 
@@ -107,9 +108,10 @@ void loop() {
         
         delay(100);
     }
-    
+    /*
     free(p_parachute);
     free(p_altitude);
     free(p_customAltitude);
+    */
 }
 
